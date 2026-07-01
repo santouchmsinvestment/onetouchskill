@@ -83,12 +83,12 @@ const Banna: React.FC<BannerProps> = ({
         
 
           {/* Title */}
-          <h1 className="mb-6 font-bold leading-tight  text-white/80 text-5xl sm:text-6xl lg:text-7xl opacity-0 animate-[fadeUp_0.8s_ease-out_0.15s_forwards]">
+          <h1 className="mb-6 font-bold leading-tight  text-white/80 text-4xl sm:text-6xl lg:text-7xl opacity-0 animate-[fadeUp_0.8s_ease-out_0.15s_forwards]">
             {title}
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-10 font-luxury max-w-xl text-xl sm:text-lg text-primary opacity-0 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
+          <p className="mb-10 font-luxury max-w-xl text-xl sm:text-lg text-white/60 text-center opacity-0 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
             {subtitle}
           </p>
 

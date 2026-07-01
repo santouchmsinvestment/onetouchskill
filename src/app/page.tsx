@@ -9,7 +9,7 @@ export default function Home() {
    <main className="min-h-screen bg-deep-green">
      <Navigation />
      <Hero title="Welcome to OneTouch Skills Development Foundation"
-      subtitle="Helping Hands, Changing Lives." />
+      subtitle="Empowering individuals, strengthening communities, and creating lasting opportunities." />
        <About />
        <Services />
        <WhyUs/>
