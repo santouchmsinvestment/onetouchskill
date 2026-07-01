@@ -75,39 +75,27 @@ const Banna: React.FC<BannerProps> = ({
         </video>
       )}
 
-      <div className="absolute inset-0 z-10 bg-black/50" />
+      <div className="absolute inset-0  bg-black/50" />
 
-      <div className="absolute inset-0 z-20 flex items-end mt-10">
-        <div className="w-full max-w-5xl px-6 pb-16 sm:px-12 lg:px-20 text-left">
+      <div className="flex z-20 mt-20 md:mt-30 flex-col justify-center items-center h-full w-full max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 text-left">
+        <div className="w-full max-w-5xl px-6 pb-16 sm:px-12 lg:px-20 text-center">
           
-          {/* Welcome */}
-          <div className="relative lg:top-5 md:left-10">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-white/20" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="px-3 py-3 backdrop-blur-md text-white/60 text-xs font-medium rounded-full border border-white/10 shadow-[0_0_20px_5px_rgba(214,181,109,0.5)]">
-                <p className="mb-0 text-sm font-medium uppercase tracking-[0.35em] text-[#d6b56d] opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
-                  {welcomeText}
-                </p>
-              </span>
-            </div>
-          </div>
+        
 
           {/* Title */}
-          <h1 className="mb-6 font-bold leading-tight text-white text-5xl sm:text-6xl lg:text-7xl opacity-0 animate-[fadeUp_0.8s_ease-out_0.15s_forwards]">
+          <h1 className="mb-6 font-bold leading-tight  text-white/80 text-5xl sm:text-6xl lg:text-7xl opacity-0 animate-[fadeUp_0.8s_ease-out_0.15s_forwards]">
             {title}
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-10 font-luxury max-w-xl text-xl sm:text-lg text-[#d8980d] opacity-0 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
+          <p className="mb-10 font-luxury max-w-xl text-xl sm:text-lg text-primary opacity-0 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
             {subtitle}
           </p>
 
           {/* Buttons */}
           <div className="inline-flex flex-wrap gap-4 opacity-0 animate-[fadeUp_0.8s_ease-out_0.45s_forwards]">
             
-            {/* Primary */}
+            {/* Primary 
             {primary.href ? (
               <Link
                 href={primary.href}
@@ -121,10 +109,10 @@ const Banna: React.FC<BannerProps> = ({
                 className="px-5 py-3 backdrop-blur-md bg-[#3d2505] text-white/80 text-sm font-semibold uppercase tracking-wide border border-white/60 hover:bg-[#d6b56d] hover:text-black transition-colors duration-300"
               >
                 {primary.label}
-              </button>
-            )}
+              </button> 
+            )} 
 
-            {/* Secondary */}
+            {/* Secondary 
             {secondary.href ? (
               <Link
                 href={secondary.href}
@@ -140,7 +128,7 @@ const Banna: React.FC<BannerProps> = ({
                 {secondary.label}
               </button>
             )}
-
+    */}
           </div>
         </div>
       </div>

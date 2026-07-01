@@ -1,26 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A3D2E;
+  --foreground: #F5F7F5;
+
+  /* Brand palette — pulled from the OTSDEF logo/card: deep green, white, blue */
+  --color-deep-green: #0A3D2E;
+  --color-deep-green-light: #0F4D3A;
+  --color-deep-green-dark: #062A20;
+
+  --color-blue: #2E6DA4;
+  --color-blue-light: #5B9BD5;
+  --color-blue-muted: #1F4E79;
+
+  --color-cream: #F5F7F5;
+  --color-cream-dim: rgba(245, 247, 245, 0.72);
+  --color-cream-faint: rgba(245, 247, 245, 0.45);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-deep-green: var(--color-deep-green);
+  --color-deep-green-light: var(--color-deep-green-light);
+  --color-deep-green-dark: var(--color-deep-green-dark);
+  --color-blue: var(--color-blue);
+  --color-blue-light: var(--color-blue-light);
+  --color-blue-muted: var(--color-blue-muted);
+  --color-cream: var(--color-cream);
+  --font-serif: 'Playfair Display', serif;
+  --font-luxury: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --spacing-18: 4.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-deep-green);
+  color: var(--color-cream);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Shared brand utilities used across components ─────────────────────── */
+
+.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  background-color: var(--color-blue);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-blue:hover {
+  background-color: var(--color-blue-light);
+  transform: translateY(-1px);
+}
+
+.btn-blue-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-blue-light);
+  color: var(--color-blue-light);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-blue-outline:hover {
+  background-color: var(--color-blue-light);
+  color: var(--color-deep-green-dark);
+}
+
+.section-alt {
+  background-color: var(--color-deep-green-light);
+}
+
+.card-surface {
+  background-color: rgba(245, 247, 245, 0.04);
+  border: 1px solid rgba(46, 109, 164, 0.25);
+}
+
+.text-blue-heading {
+  color: var(--color-blue-light);
+}
+
+.divider-blue {
+  height: 1px;
+  background-color: rgba(46, 109, 164, 0.35);
 }
